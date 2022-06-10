@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 public class UserController {
+    @GetMapping("/users/{id}")
     public User findById(Long id) {
         return new User(1L, "Alice", "123456");
     }
