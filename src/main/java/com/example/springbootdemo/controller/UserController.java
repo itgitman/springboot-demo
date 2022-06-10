@@ -1,6 +1,8 @@
 package com.example.springbootdemo.controller;
 
 import com.example.springbootdemo.model.User;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -11,7 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 public class UserController {
-    public User findById(Long id) {
+    @GetMapping("/users/{id}")
+    public User findById(@PathVariable("id") Long id) {
         return new User(1L, "Alice", "123456");
     }
 }
