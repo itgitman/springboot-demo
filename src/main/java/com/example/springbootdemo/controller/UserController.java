@@ -17,4 +17,7 @@ public class UserController {
     public User findById(@PathVariable("id") Long id) {
         return new User(1L, "Alice", "123456");
     }
+    public List<User> findAll(){
+        return null;
+    }
 }
