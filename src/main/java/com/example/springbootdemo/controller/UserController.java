@@ -1,6 +1,7 @@
 package com.example.springbootdemo.controller;
 
 import com.example.springbootdemo.model.User;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,5 +17,10 @@ public class UserController {
     @GetMapping("/users/{id}")
     public User findById(@PathVariable("id") Long id) {
         return new User(1L, "Alice", "123456");
+    }
+
+    @DeleteMapping("/users/{id}")
+    public void deleteById(@PathVariable("id") Long id) {
+
     }
 }
