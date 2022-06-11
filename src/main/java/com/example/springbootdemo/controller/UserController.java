@@ -1,10 +1,7 @@
 package com.example.springbootdemo.controller;
 
 import com.example.springbootdemo.model.User;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,6 +24,11 @@ public class UserController {
 
     @GetMapping("/users")
     public List<User> findAll(){
+        return null;
+    }
+
+    @GetMapping("/users?name={name}")
+    public User findByName(@RequestParam(value = "name",required = true) String name) {
         return null;
     }
 }
