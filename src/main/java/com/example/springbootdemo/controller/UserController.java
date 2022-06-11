@@ -23,7 +23,7 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    public List<User> findAll(){
+    public List<User> findAll(@RequestParam("user") User user){
         return null;
     }
 
