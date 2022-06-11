@@ -25,6 +25,7 @@ public class UserController {
     public void deleteById(@PathVariable("id") Long id) {
     }
 
+    @GetMapping("/users")
     public List<User> findAll(){
         return null;
     }
