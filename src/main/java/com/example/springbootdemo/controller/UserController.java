@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * @Author lenovo
  * @Description:
@@ -21,6 +23,9 @@ public class UserController {
 
     @DeleteMapping("/users/{id}")
     public void deleteById(@PathVariable("id") Long id) {
+    }
 
+    public List<User> findAll(){
+        return null;
     }
 }
